@@ -3,6 +3,7 @@ pyinstaller --onefile --clean --noconsole --icon=icon.ico --uac-admin --add-data
 
 Libraries:
 You need Python 3.11
+
 python -m pip install pywin32
 python -m pywin32_postinstall -install
 python -m pip install pygame
