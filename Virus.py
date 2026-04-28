@@ -28,7 +28,7 @@ from ctypes import *
 import winsound
 
 
-def clear_effects_nuclear():
+def clear_effects_allplswork():
     global threads
     threads.clear()
     
@@ -73,7 +73,7 @@ def clear_effects_nuclear():
     gdi32.DeleteObject(hbm)
     user32.ReleaseDC(0, hdc)
 
-clear_effects = clear_effects_nuclear
+clear_effects = clear_effects_allplswork
 
 def make_fullscreen():
     global screen_width, screen_height
@@ -1081,8 +1081,8 @@ def effect_rainbow_swirl(duration=5):
 def msg_snare():
     def show():
         ctypes.windll.user32.MessageBoxW(0, 
-            "SNARE!", 
-            "⚠️ BEAT", 
+            "SNARE", 
+            "BEAT", 
             win32con.MB_OK | win32con.MB_ICONERROR | win32con.MB_TOPMOST)
     thread = threading.Thread(target=show)
     thread.daemon = True
@@ -1091,8 +1091,8 @@ def msg_snare():
 def msg_kick():
     def show():
         ctypes.windll.user32.MessageBoxW(0, 
-            "KICK!", 
-            "⚠️ BEAT", 
+            "KICK", 
+            "BEAT", 
             win32con.MB_OK | win32con.MB_ICONWARNING | win32con.MB_TOPMOST)
     thread = threading.Thread(target=show)
     thread.daemon = True
